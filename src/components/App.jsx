@@ -37,7 +37,7 @@ class App extends Component {
     checkUser
       ? alert(`${name} is already in the contacts`)
       : this.setState(prevState => ({
-          contacts: [newContact, ...contacts],
+          contacts: [newContact, ...prevState.contacts],
         }));
   };
 
